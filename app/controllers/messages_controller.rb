@@ -52,7 +52,7 @@ class MessagesController < ApplicationController
                 @message.save
                 redirect_to '/' + @message.id.to_s + '/' + @message.token
             else
-                flash[:alert] = 'Incorrect password'
+                flash.now[:alert] = 'Incorrect password'
                 render 'auth'
             end
         else

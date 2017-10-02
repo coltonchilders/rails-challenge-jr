@@ -16006,3 +16006,472 @@ Processing by MessagesController#index as HTML
 Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/home" for 127.0.0.1 at 2017-10-02 14:44:33 -0500
+  
+Gem::LoadError (Specified 'sqlite3' for database adapter, but the gem is not loaded. Add `gem 'sqlite3'` to your Gemfile (and ensure its version is at the minimum required by ActiveRecord).):
+  
+activerecord (5.1.4) lib/active_record/connection_adapters/connection_specification.rb:188:in `rescue in spec'
+activerecord (5.1.4) lib/active_record/connection_adapters/connection_specification.rb:185:in `spec'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:880:in `establish_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:58:in `establish_connection'
+activerecord (5.1.4) lib/active_record/railtie.rb:124:in `block (2 levels) in <class:Railtie>'
+activesupport (5.1.4) lib/active_support/lazy_load_hooks.rb:69:in `instance_eval'
+activesupport (5.1.4) lib/active_support/lazy_load_hooks.rb:69:in `block in execute_hook'
+activesupport (5.1.4) lib/active_support/lazy_load_hooks.rb:60:in `with_execution_control'
+activesupport (5.1.4) lib/active_support/lazy_load_hooks.rb:65:in `execute_hook'
+activesupport (5.1.4) lib/active_support/lazy_load_hooks.rb:50:in `block in run_load_hooks'
+activesupport (5.1.4) lib/active_support/lazy_load_hooks.rb:49:in `each'
+activesupport (5.1.4) lib/active_support/lazy_load_hooks.rb:49:in `run_load_hooks'
+activerecord (5.1.4) lib/active_record/base.rb:326:in `<module:ActiveRecord>'
+activerecord (5.1.4) lib/active_record/base.rb:25:in `<top (required)>'
+activesupport (5.1.4) lib/active_support/dependencies.rb:292:in `require'
+activesupport (5.1.4) lib/active_support/dependencies.rb:292:in `block in require'
+activesupport (5.1.4) lib/active_support/dependencies.rb:258:in `load_dependency'
+activesupport (5.1.4) lib/active_support/dependencies.rb:292:in `require'
+activerecord (5.1.4) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/home" for 127.0.0.1 at 2017-10-02 14:45:18 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 256ms (Views: 240.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/messages/new" for 127.0.0.1 at 2017-10-02 14:45:21 -0500
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 54ms (Views: 44.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-02 14:45:30 -0500
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j0EDeyd1vaFk5NpVD+4ZmA8jR3GX1huk7goojDj/Hh3B0Gn3G1Zk3/N4eow5u3PuZSO0XrNQlcnJ8ZSvgmDIww==", "message"=>{"body"=>"hello", "email"=>"colton@example.com", "password"=>"[FILTERED]", "token"=>"d96c0b87b4a9b5a13a6a"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "body", "email", "token", "password_digest") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2017-10-02 19:45:30.636518"], ["updated_at", "2017-10-02 19:45:30.636518"], ["body", "hello"], ["email", "colton@example.com"], ["token", "d96c0b87b4a9b5a13a6a"], ["password_digest", "$2a$10$Ufr73MxrVn6HaCsEaw8yveay6TBf5zrE/WWSDN1kne1SARBh.L3Q2"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/messages
+Completed 302 Found in 87ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-10-02 14:45:30 -0500
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 48ms (Views: 44.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-10-02 14:45:38 -0500
+Processing by MessagesController#about as HTML
+  Rendering messages/about.html.erb within layouts/application
+  Rendered messages/about.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/68/d96c0b87b4a9b5a13a6a" for 127.0.0.1 at 2017-10-02 14:46:15 -0500
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"68", "token"=>"d96c0b87b4a9b5a13a6a"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+Redirected to http://localhost:3000/messages/68/d96c0b87b4a9b5a13a6a/auth
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/68/d96c0b87b4a9b5a13a6a/auth" for 127.0.0.1 at 2017-10-02 14:46:15 -0500
+Processing by MessagesController#auth as HTML
+  Parameters: {"id"=>"68", "token"=>"d96c0b87b4a9b5a13a6a"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  Rendering messages/auth.html.erb within layouts/application
+  Rendered messages/auth.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 35ms (Views: 31.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/messages/68/d96c0b87b4a9b5a13a6a/auth" for 127.0.0.1 at 2017-10-02 14:46:20 -0500
+Processing by MessagesController#auth as HTML
+  Parameters: {"id"=>"68", "token"=>"d96c0b87b4a9b5a13a6a"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  Rendering messages/auth.html.erb within layouts/application
+  Rendered messages/auth.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/messages/68" for 127.0.0.1 at 2017-10-02 14:46:22 -0500
+Processing by MessagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0MN5lhgvdTrDN9I/oZbA+xJr83EmAMlOrGyVUstnssR851djOlZ6sXrGwziB2n4rRTWYGJACbUMKdqj+mVU/pA==", "message"=>{"pw"=>"d"}, "commit"=>"View Message", "id"=>"68"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  Rendering messages/auth.html.erb within layouts/application
+  Rendered messages/auth.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 102ms (Views: 26.0ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/messages/68" for 127.0.0.1 at 2017-10-02 14:46:25 -0500
+Processing by MessagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xiW8TCzUk1zX2HWGfF5PS5McjwAHm+Y5Kkzc9rmEO11qAZK5Dq2c124pZIFcEvGbxELkabGZQjSMVuFa67a2PQ==", "message"=>{"pw"=>"f"}, "commit"=>"View Message", "id"=>"68"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "messages" SET "password_digest" = ?, "updated_at" = ? WHERE "messages"."id" = ?[0m  [["password_digest", "no-password"], ["updated_at", "2017-10-02 19:46:25.843670"], ["id", 68]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/68/d96c0b87b4a9b5a13a6a
+Completed 302 Found in 85ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/68/d96c0b87b4a9b5a13a6a" for 127.0.0.1 at 2017-10-02 14:46:25 -0500
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"68", "token"=>"d96c0b87b4a9b5a13a6a"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = ?[0m  [["id", 68]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 33ms (Views: 23.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/messages/68" for 127.0.0.1 at 2017-10-02 14:46:29 -0500
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Message with 'id'=68):
+  
+app/controllers/messages_controller.rb:37:in `show'
+Started GET "/home" for 127.0.0.1 at 2017-10-02 14:46:39 -0500
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/messages/new" for 127.0.0.1 at 2017-10-02 14:46:40 -0500
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-02 14:47:19 -0500
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FTLZ8PE34VluTv2E/h/mjHH08mN2G+0jwvOlQg4F5PNbo7N8zRQ4J/nSXV3ISoz6G/QBTFKdY07lCBlhtJoyLQ==", "message"=>{"body"=>"hello", "email"=>"colton@example.com", "password"=>"[FILTERED]", "token"=>"2e0f2620188403376834"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "body", "email", "token", "password_digest") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2017-10-02 19:47:19.338015"], ["updated_at", "2017-10-02 19:47:19.338015"], ["body", "hello"], ["email", "colton@example.com"], ["token", "2e0f2620188403376834"], ["password_digest", "$2a$10$uDNsRhcjXtYSC2jZOu.i7e6xxxKC2FyWyMlw4o40bgXdC/p7fS92q"]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/messages
+Completed 302 Found in 85ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-10-02 14:47:19 -0500
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/69/2e0f2620188403376834" for 127.0.0.1 at 2017-10-02 14:47:23 -0500
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"69", "token"=>"2e0f2620188403376834"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+Redirected to http://localhost:3000/messages/69/2e0f2620188403376834/auth
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/69/2e0f2620188403376834/auth" for 127.0.0.1 at 2017-10-02 14:47:23 -0500
+Processing by MessagesController#auth as HTML
+  Parameters: {"id"=>"69", "token"=>"2e0f2620188403376834"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  Rendering messages/auth.html.erb within layouts/application
+  Rendered messages/auth.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 22ms (Views: 18.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-10-02 14:49:37 -0500
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 40ms (Views: 34.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/69/2e0f2620188403376834" for 127.0.0.1 at 2017-10-02 14:49:38 -0500
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"69", "token"=>"2e0f2620188403376834"}
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+Redirected to http://localhost:3000/messages/69/2e0f2620188403376834/auth
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/messages/69/2e0f2620188403376834/auth" for 127.0.0.1 at 2017-10-02 14:49:38 -0500
+Processing by MessagesController#auth as HTML
+  Parameters: {"id"=>"69", "token"=>"2e0f2620188403376834"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  Rendering messages/auth.html.erb within layouts/application
+  Rendered messages/auth.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 26ms (Views: 21.3ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/messages/69" for 127.0.0.1 at 2017-10-02 14:49:44 -0500
+Processing by MessagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"91qmvMi2AnLEsdYPN39WysQL0J/IMYqKlvf3rjg0SqAoXHjN+aPyEomjTTqr9s23+mBwOk2AmOt21nqZbK2j/Q==", "message"=>{"pw"=>"d"}, "commit"=>"View Message", "id"=>"69"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  Rendering messages/auth.html.erb within layouts/application
+  Rendered messages/auth.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 116ms (Views: 39.2ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/messages/69" for 127.0.0.1 at 2017-10-02 14:49:48 -0500
+Processing by MessagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LQKuk0VzPYLnmAYx45Pg71obmozhTTOspFaTKo84kmqBJoBmZwoyCV5pFzbD314/DUXx5VdPl6ECTK6G3QofCg==", "message"=>{"pw"=>"f"}, "commit"=>"View Message", "id"=>"69"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "messages" SET "password_digest" = ?, "updated_at" = ? WHERE "messages"."id" = ?[0m  [["password_digest", "no-password"], ["updated_at", "2017-10-02 19:49:48.216880"], ["id", 69]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/69/2e0f2620188403376834
+Completed 302 Found in 76ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/69/2e0f2620188403376834" for 127.0.0.1 at 2017-10-02 14:49:48 -0500
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"69", "token"=>"2e0f2620188403376834"}
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = ?[0m  [["id", 69]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 31ms (Views: 23.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-10-02 14:50:15 -0500
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/new" for 127.0.0.1 at 2017-10-02 14:50:16 -0500
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 31ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-02 14:50:23 -0500
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gRair9WpARwqdgX5HRRDGv0N2q13NSm2ahqLrM5SJiDPh8gj6YrYYr3qpSArQSlslw0pglOzp9tN4TePdM3w/g==", "message"=>{"body"=>"hello", "email"=>"colton@example.com", "password"=>"[FILTERED]", "token"=>"e1a3472ae309d4bac57f"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "body", "email", "token", "password_digest") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2017-10-02 19:50:23.799996"], ["updated_at", "2017-10-02 19:50:23.799996"], ["body", "hello"], ["email", "colton@example.com"], ["token", "e1a3472ae309d4bac57f"], ["password_digest", "$2a$10$GNgNNXlIXjawHb1XoS/72uQccIbYdqIhdPWWlvl211viw2E0W7tgu"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/messages
+Completed 302 Found in 69ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-10-02 14:50:23 -0500
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/70/e1a3472ae309d4bac57f" for 127.0.0.1 at 2017-10-02 14:50:34 -0500
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"70", "token"=>"e1a3472ae309d4bac57f"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+Redirected to http://localhost:3000/messages/70/e1a3472ae309d4bac57f/auth
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/70/e1a3472ae309d4bac57f/auth" for 127.0.0.1 at 2017-10-02 14:50:34 -0500
+Processing by MessagesController#auth as HTML
+  Parameters: {"id"=>"70", "token"=>"e1a3472ae309d4bac57f"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+  Rendering messages/auth.html.erb within layouts/application
+  Rendered messages/auth.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/messages/70" for 127.0.0.1 at 2017-10-02 14:50:35 -0500
+Processing by MessagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pDKkJeTd7m/Zusju9Ahgdo+5oL2JqKHTf6i8152TWhbDizGh5x4K+LSMNF1XiKXB5KA18F3X4m2xWNy1JgNf1A==", "message"=>{"pw"=>"d"}, "commit"=>"View Message", "id"=>"70"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+  Rendering messages/auth.html.erb within layouts/application
+  Rendered messages/auth.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 84ms (Views: 17.2ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/messages/70" for 127.0.0.1 at 2017-10-02 14:50:37 -0500
+Processing by MessagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OolS1S6xrFeHWw5Q3K/mYVOtZx92XkrFbGVfSDp7mCyWrXwgDMij3D6qH1f841ixBPMMdsBc7sjKf2LkaEkVTA==", "message"=>{"pw"=>"f"}, "commit"=>"View Message", "id"=>"70"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "messages" SET "password_digest" = ?, "updated_at" = ? WHERE "messages"."id" = ?[0m  [["password_digest", "no-password"], ["updated_at", "2017-10-02 19:50:37.894922"], ["id", 70]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/70/e1a3472ae309d4bac57f
+Completed 302 Found in 75ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/70/e1a3472ae309d4bac57f" for 127.0.0.1 at 2017-10-02 14:50:37 -0500
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"70", "token"=>"e1a3472ae309d4bac57f"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = ?[0m  [["id", 70]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 14.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-10-02 14:50:41 -0500
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/new" for 127.0.0.1 at 2017-10-02 14:50:42 -0500
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-02 14:50:47 -0500
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9jVcuuVW2NIwrdkEvGlOCQYzw4Rbhf3hFN1xytT6YJG4pDY22XUBrKcxed2KPCR/bDMwq38Dc4wzJs3pbmW2Tw==", "message"=>{"body"=>"helllo", "email"=>"colton@example.com", "password"=>"[FILTERED]", "token"=>"58122afea5275eaa30e1"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "body", "email", "token", "password_digest") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2017-10-02 19:50:47.529264"], ["updated_at", "2017-10-02 19:50:47.529264"], ["body", "helllo"], ["email", "colton@example.com"], ["token", "58122afea5275eaa30e1"], ["password_digest", "$2a$10$daYhgi9YOkwSHMR0jFOH0uxK6YszzP8HBQKtS6mmhJK9dkUl1Db7e"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/messages
+Completed 302 Found in 77ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-10-02 14:50:47 -0500
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/71/58122afea5275eaa30e1" for 127.0.0.1 at 2017-10-02 14:50:48 -0500
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"71", "token"=>"58122afea5275eaa30e1"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+Redirected to http://localhost:3000/messages/71/58122afea5275eaa30e1/auth
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/71/58122afea5275eaa30e1/auth" for 127.0.0.1 at 2017-10-02 14:50:48 -0500
+Processing by MessagesController#auth as HTML
+  Parameters: {"id"=>"71", "token"=>"58122afea5275eaa30e1"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering messages/auth.html.erb within layouts/application
+  Rendered messages/auth.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 27ms (Views: 23.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/messages/71" for 127.0.0.1 at 2017-10-02 14:50:50 -0500
+Processing by MessagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z23RUbFxM/n+KFUiWGJBD/VzIWxNRuZYfGpDMhIFJOW8ZxY1Tmdrp6vbV7Db4J1GuLkv+UlRnai1R9R+v8yU9A==", "message"=>{"pw"=>"d"}, "commit"=>"View Message", "id"=>"71"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering messages/auth.html.erb within layouts/application
+  Rendered messages/auth.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 82ms (Views: 15.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-10-02 14:50:52 -0500
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/71/58122afea5275eaa30e1" for 127.0.0.1 at 2017-10-02 14:50:53 -0500
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"71", "token"=>"58122afea5275eaa30e1"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+Redirected to http://localhost:3000/messages/71/58122afea5275eaa30e1/auth
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/71/58122afea5275eaa30e1/auth" for 127.0.0.1 at 2017-10-02 14:50:53 -0500
+Processing by MessagesController#auth as HTML
+  Parameters: {"id"=>"71", "token"=>"58122afea5275eaa30e1"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering messages/auth.html.erb within layouts/application
+  Rendered messages/auth.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/messages/71" for 127.0.0.1 at 2017-10-02 14:50:55 -0500
+Processing by MessagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NkaqDUB96fYg/yFZ1Yv4xubutbPZlyc3hA4kXWTAvdztTG1pv2uxqHUMI8tWCSSPqyS7Jt2AXMdNI7MRyQkNzQ==", "message"=>{"pw"=>"f"}, "commit"=>"View Message", "id"=>"71"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "messages" SET "password_digest" = ?, "updated_at" = ? WHERE "messages"."id" = ?[0m  [["password_digest", "no-password"], ["updated_at", "2017-10-02 19:50:55.220518"], ["id", 71]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/71/58122afea5275eaa30e1
+Completed 302 Found in 73ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/71/58122afea5275eaa30e1" for 127.0.0.1 at 2017-10-02 14:50:55 -0500
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"71", "token"=>"58122afea5275eaa30e1"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = ?[0m  [["id", 71]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 13.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-10-02 14:50:56 -0500
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.2ms)
+
+
