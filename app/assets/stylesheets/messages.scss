@@ -1,0 +1,222 @@
+// Place all the styles related to the Messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* General tag selectors */
+
+html, body, p {
+    margin: 0;
+    width:  100%;
+    font-family: 'Raleway', sans-serif;
+}
+
+a, a:hover {
+    text-decoration:    none !important;
+}
+
+body {
+    background-color: #eee;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+
+button {
+    background-color: #f2580b;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 12px 24px;
+    transition: background-color 0.5s;
+}
+
+button:hover {
+    background-color: #c24609;
+    transition: background-color 0.5s;
+}
+
+form label {
+    display: block;
+    font-size: 24pt;
+    width: 100%;
+}
+
+form textarea {
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 20px 0 10px;
+    min-height: 100px;
+    padding: 16px;
+    transition: border 0.5s;
+    width: calc(100% - 32px);
+    font-size: 20px;
+}
+
+form textarea:focus {
+    border: 1px solid #0084d7;
+    box-shadow: 0;
+    outline: 0;
+    transition: border 0.5s;
+    font-size: 20px;
+}
+
+input[type=password],[type=text] {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 24px;
+}
+
+/* Class selectors */
+
+@media (max-width:1024) {
+    .container-fluid {
+        margin: auto 10%;
+    }
+}
+
+@media (min-width:1024) {
+    .container-fluid {
+        margin: auto 20%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .messages, .create {
+        padding: 0 20px;
+    }
+}
+
+.messages, .create, .auth, .show {
+  margin: 40px 0;
+}
+
+.messages .actions a,
+.create .actions input,
+.auth .actions input {
+    background-color: #6b48f9;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+    margin-top: 10px;
+    padding: 12px 24px;
+    transition: background-color 0.5s;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+}
+
+.header {
+    background-color: #6b48f9;
+    box-shadow: 10px 2px 5px rgba(0,0,0,0.15);
+    height: 100px; 
+    text-align: center;
+    width: 100%;
+
+}
+
+.header i {
+    margin: 15px 0 0;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+}
+
+.header .container {
+    text-align: center;
+}
+
+.fa {
+    width: 60px;
+    height: 60px;
+    color: white;
+}
+
+.field {
+    margin: auto 10%;
+}
+
+.create-btn input {
+    margin-left: 10%;
+}
+
+.view-btn input {
+    margin-left: 10%;
+}
+
+.show .time {
+    margin-top: 100px;
+}
+
+.token {
+    word-break: break-all;
+}
+
+.delete a {
+    margin-left: calc(100% - 150px);
+}
+
+.new-message {
+    margin-bottom: 30px;
+    margin-left: calc(50% - 100px)
+}
+
+.message {
+    background-color: #fff;
+    font-weight: 300;
+    padding: 16px;
+    margin: 20px auto;
+    width: 80%;
+    font-size: 24px;
+}
+
+.password {
+    width: auto;
+    margin-left: 100px;
+    align-content: center;
+    position: static;
+}
+
+.edit_message {
+     width: 100%;
+    margin: auto;
+    align-self: center;
+    position: static;
+}
+
+.disclaimer {
+    text-align: center;
+}
+
+.short-intro {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.intro h1 {
+    font-size: 30pt;
+}
+
+.intro {
+    font-size: 18pt;
+    background: white;
+    padding: 12px 24px 48px 24px;
+    margin: 50px 50px;
+}
+
+p.time {
+  color: #0084d7;
+  font-size: 12px;
+  margin-top: 12px;
+}

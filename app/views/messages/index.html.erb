@@ -1,0 +1,39 @@
+<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+
+<link href="https://fonts.googleapis.com/css?family=Megrim|Raleway" rel="stylesheet">
+
+<div class="header">
+  <div class="container">
+      <a href="/home">
+        <i class="fa fa-user-secret fa-3x" aria-hidden="true"></i><span style="font-family: 'Megrim'; color:white; font-size: 48pt;"> ephemeral</span>
+    </a>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row messages">
+        <div class="col-md-12 actions new-message">
+            <%= link_to 'New Message', "messages/new" %>
+        </div>
+  	<% @messages.each do |message| %> 
+        <div class="col-md-12 message">
+            <% if (message.email?) %>
+                <h1 class="email">Email</h1> <p class="email"><%= message.email %></p>
+            <% end %>
+            <h1 class="token"> Message URL</h1>
+                <p class="token"><a href="http://localhost:3000/<%=message.id.to_s+ "/" + message.token %>">http://localhost:3000/<%=message.id.to_s+ "/" + message.token%></a></p>
+            <p class="time"><%= message.created_at %></p> 
+            <div class="actions delete">
+                <%= link_to 'Delete', message, :method => :delete %>
+            </div>
+        </div>
+		<% end %>
+    <div class="col-md-12 short-intro">
+        <p>Send and receive secure, automatically deleted messages with Ephemeral.<br> <a href="/about">Learn more here</a></p><br>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,2 @@
+class UpdatePassword < ApplicationRecord
+end

@@ -1,0 +1,28 @@
+<link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Megrim|Raleway" rel="stylesheet">
+
+<div class="header">
+  <div class="container">
+      <a href="/home">
+        <i class="fa fa-user-secret fa-3x" aria-hidden="true"></i><span style="font-family: 'Megrim'; color:white; font-size: 48pt;"> ephemeral</span>
+      </a>
+  </div>
+</div>
+
+<div class="show">
+  <div class="container-fluid">
+      <div class="message"> 
+          <h2 class="body">Message</h2><p class="body"> <%= @message.body %></p>
+          <% if (@message.email?) %>
+            <h2 class="email">From</h2><p class="email">  <%= @message.email %></p>
+          <% end %>
+        <p class="time"><%= @message.created_at %></p> 
+    </div> 
+  </div>
+    <p class="disclaimer">This message has been deleted. Once you leave this page, you will not be able to open it again.</p>
+    <div class="short-intro">
+        <p>Send and receive secure, automatically deleted messages with Ephemeral.<br> <a href="/about">Learn more here</a></p><br>
+      </div>
+</div>
