@@ -16475,3 +16475,129 @@ Processing by MessagesController#index as HTML
 Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.2ms)
 
 
+  [1m[35m (12.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (20.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1672246119064715985)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDb (20171002200045)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (29.7ms)[0m  [1m[35mCREATE TABLE "messages" ("id" bigserial primary key, "body" text, "email" character varying, "token" character varying, "password_digest" character varying)[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171002200045"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-10-02 20:03:11.629411"], ["updated_at", "2017-10-02 20:03:11.629411"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1672246119064715985)[0m
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1672246119064715985)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddTs (20171002200539)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (30.4ms)[0m  [1m[35mALTER TABLE "users" ADD "created_at" timestamp NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1672246119064715985)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1672246119064715985)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddTs (20171002200539)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.6ms)[0m  [1m[35mALTER TABLE "messages" ADD "created_at" timestamp NOT NULL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "messages" ADD "updated_at" timestamp NOT NULL[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171002200539"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1672246119064715985)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/home" for 127.0.0.1 at 2017-10-02 15:09:23 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (2.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 277ms (Views: 257.1ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/messages/new" for 127.0.0.1 at 2017-10-02 15:09:27 -0500
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 55ms (Views: 42.0ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-02 15:09:33 -0500
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r49sD9Z7DnA3zIh6SIv0NZKTYUDrViL1jRlxAtiFNHThHgaD6ljXDqBQKKN+3p5D+JOSb8/QrJiq4s0hYhriqg==", "message"=>{"body"=>"hello", "email"=>"colton@example.com", "password"=>"[FILTERED]", "token"=>"ff4b80290d347ec349e8"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "messages" ("body", "email", "token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["body", "hello"], ["email", "colton@example.com"], ["token", "ff4b80290d347ec349e8"], ["password_digest", "$2a$10$prD6HHJDBazSQ2XfNXmYv.GYEaIKvuVBKCgro91uOMgr/ayfqQndK"], ["created_at", "2017-10-02 20:09:33.128514"], ["updated_at", "2017-10-02 20:09:33.128514"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages
+Completed 302 Found in 84ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-10-02 15:09:33 -0500
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/1/ff4b80290d347ec349e8" for 127.0.0.1 at 2017-10-02 15:09:35 -0500
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"1", "token"=>"ff4b80290d347ec349e8"}
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/messages/1/ff4b80290d347ec349e8/auth
+Completed 302 Found in 10ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/messages/1/ff4b80290d347ec349e8/auth" for 127.0.0.1 at 2017-10-02 15:09:35 -0500
+Processing by MessagesController#auth as HTML
+  Parameters: {"id"=>"1", "token"=>"ff4b80290d347ec349e8"}
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering messages/auth.html.erb within layouts/application
+  Rendered messages/auth.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 26ms (Views: 20.9ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/messages/1" for 127.0.0.1 at 2017-10-02 15:09:37 -0500
+Processing by MessagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mZOZLD8kkyPWOSjvoWeitQYPX21I4jyA92i4nH4cuKN3nexRZqSGlzrTt+0lYGilIIYIcgZTjsbAZX0O50abUw==", "message"=>{"pw"=>"d"}, "commit"=>"View Message", "id"=>"1"}
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering messages/auth.html.erb within layouts/application
+  Rendered messages/auth.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 92ms (Views: 15.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/messages/1" for 127.0.0.1 at 2017-10-02 15:09:39 -0500
+Processing by MessagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1Rjnnakd5vcrQYzrytWOWAPxr/NViJyFpJWoZkSdb215PMloi2TpfJKwnezqmTCIVK/EmuOKOIgCj5XKFq/iDQ==", "message"=>{"pw"=>"f"}, "commit"=>"View Message", "id"=>"1"}
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.6ms)[0m  [1m[33mUPDATE "messages" SET "password_digest" = $1, "updated_at" = $2 WHERE "messages"."id" = $3[0m  [["password_digest", "no-password"], ["updated_at", "2017-10-02 20:09:39.287619"], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/1/ff4b80290d347ec349e8
+Completed 302 Found in 87ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/1/ff4b80290d347ec349e8" for 127.0.0.1 at 2017-10-02 15:09:39 -0500
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"1", "token"=>"ff4b80290d347ec349e8"}
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 15.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-10-02 15:09:41 -0500
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 0.3ms)
+
+
