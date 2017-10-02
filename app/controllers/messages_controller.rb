@@ -50,7 +50,7 @@ class MessagesController < ApplicationController
             if @res
                 @message.password_digest = "no-password"
                 @message.save
-                redirect_to '/' + @message.id.to_s + '/' + @message.token
+                redirect_to '/messages/' + @message.id.to_s + '/' + @message.token
             else
                 flash.now[:alert] = 'Incorrect password'
                 render 'auth'
