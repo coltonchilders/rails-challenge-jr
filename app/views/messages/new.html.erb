@@ -21,7 +21,7 @@
             <%= f.text_field :email %><br><br>
             <%= f.label :password %>
             <%= f.password_field :password %>
-            <%= require "SecureRandom"
+            <%= require "securerandom"
                 token = SecureRandom.hex(10)
                 f.hidden_field :token, :value => token %>
   		</div> 
