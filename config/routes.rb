@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :messages, only: [:index, :new, :create, :show, :update, :destroy]
     
     get '/about' => 'messages#about'
-    get ':id/:token' => 'messages#show'
+    get '/messages/:id/:token' => 'messages#show'
     get '/messages/:id/:token/auth' => 'messages#auth'
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

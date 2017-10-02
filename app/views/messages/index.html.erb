@@ -23,7 +23,11 @@
                 <h1 class="email">Email</h1> <p class="email"><%= message.email %></p>
             <% end %>
             <h1 class="token"> Message URL</h1>
-                <p class="token"><a href="http://localhost:3000/<%=message.id.to_s+ "/" + message.token %>">http://localhost:3000/<%=message.id.to_s+ "/" + message.token%></a></p>
+                <p class="token">
+                    <a href="<%= url_for(request.original_url) + '/' + message.id.to_s+ "/" + message.token %>">
+                        <%= url_for(request.original_url) + '/' + message.id.to_s+ "/" + message.token %>
+                    </a>
+                </p>
             <p class="time"><%= message.created_at %></p> 
             <div class="actions delete">
                 <%= link_to 'Delete', message, :method => :delete %>
