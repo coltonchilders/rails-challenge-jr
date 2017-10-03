@@ -17,13 +17,13 @@
           <div class="field">
             <%= f.label :password %> 
             <%= f.password_field :pw %>
-              <% if flash[:alert] %>
+            <div class="actions view-btn"> 
+                <%= f.submit "View Message" %> 
+            </div> 
+          </div>
+          <% if flash[:alert] %>
                 <div class="alert" style="color:red;"><%= flash[:alert] %></div>
             <% end %>
-          </div>
-          <div class="actions view-btn"> 
-    		<%= f.submit "View Message" %> 
-          </div> 
 		<% end %>
       </div>
     </div>
