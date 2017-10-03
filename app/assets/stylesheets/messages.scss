@@ -117,6 +117,7 @@ input[type=password],[type=text] {
     text-decoration: none;
     display: inline-block;
     font-family: 'Raleway', sans-serif;
+    -webkit-appearance: none;
 }
 
 .header {
@@ -197,10 +198,6 @@ input[type=password],[type=text] {
     position: static;
 }
 
-.disclaimer {
-    text-align: center;
-}
-
 .short-intro {
     text-align: center;
     margin-top: 100px;
@@ -221,4 +218,10 @@ p.time {
   color: #0084d7;
   font-size: 12px;
   margin-top: 12px;
+}
+
+.footer {
+    text-align: center;
+    margin: auto;
+    padding: 0 15px 0 15px;
 }
