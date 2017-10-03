@@ -39,7 +39,7 @@ class MessagesController < ApplicationController
         if @message.password_digest != "no-password"
             redirect_to '/messages/' + @message.id.to_s + '/' + @message.token + '/auth'
         else
-#            @message.destroy
+            @message.destroy
         end
     end
     
